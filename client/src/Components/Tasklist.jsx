@@ -1,5 +1,3 @@
-
-
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setTasks } from '../redux/Taskslice';
@@ -25,7 +23,7 @@ const TaskList = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="flex flex-wrap justify-center gap-4">
       <TaskFilter />
       {tasks.map((task) => (
         <TaskItem key={task.id} task={task} />

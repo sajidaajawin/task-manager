@@ -1,37 +1,23 @@
-import React from 'react'
+import React from 'react';
 
 function Footer() {
-  return (
+    return (
+        <footer className="bg-indigo-500 text-white py-4 mt-32">
+          <div className="container mx-auto flex justify-center items-center">
+            <p className="text-sm mr-4">© {new Date().getFullYear()} Travelers. All Rights Reserved.</p>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="text-white mx-2 hover:text-gray-300">
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="text-white mx-2 hover:text-gray-300">
+              <i className="fab fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="text-white mx-2 hover:text-gray-300">
+              <i className="fab fa-twitter"></i>
+            </a>
+          </div>
+        </footer>
+      );
+    };
     
 
-
-
-<footer class="bg-black rounded-lg shadow dark:bg-gray-900 m-4">
-    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <div class="sm:flex sm:items-center sm:justify-between">
-
-            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-                <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">About</a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
-    </div>
-</footer>
-
-
-  )
-}
-
-export default Footer
+export default Footer;

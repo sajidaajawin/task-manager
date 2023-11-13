@@ -41,6 +41,7 @@ const LoginForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // if (validateForm()) {
     console.log("object");
     try {
       const response = await axios.post(
@@ -54,7 +55,7 @@ const LoginForm = () => {
       localStorage.setItem("token", token);
       localStorage.setItem("user_id", user.user_id);
       if (user) {
-        redirectToHome('/');
+        redirectToHome();
         alert(`Welcome, ${user.username}!`);
       } else {
         console.error("User not found.");
@@ -67,8 +68,8 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="min-h-Full flex items-center justify-center bg-white py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8 bg-[#C08261] p-8 rounded-lg shadow-md">
+    <div className="min-h-screen flex items-center justify-center bg-white py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-md w-full space-y-8 bg-indigo-500 p-8 rounded-lg shadow-md">
         <h2 className="text-3xl font-extrabold text-white text-center">
           Login
         </h2>
@@ -84,7 +85,7 @@ const LoginForm = () => {
                 type="email"
                 autoComplete="email"
                 required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border text-[#C08261]border-[#C08261]placeholder-[#C08261]text-sm focus:outline-none focus:ring-[#C08261]focus:border-[#C08261] focus:z-10"
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border text-indigo-500 border-indigo-500 placeholder-blue-900 text-sm focus:outline-none focus:ring-blue-400 focus:border-blue-400 focus:z-10"
                 placeholder="Email address"
                 value={formData.email}
                 onChange={handleInputChange}
@@ -103,7 +104,7 @@ const LoginForm = () => {
                 type="password"
                 autoComplete="new-password"
                 required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border text-[#C08261] border-blue-900 placeholder-[#C08261] text-sm focus:outline-none focus:ring-[#C08261] focus:border-[#C08261]focus:z-10"
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border text-blue-900 border-blue-900 placeholder-blue-900 text-sm focus:outline-none focus:ring-blue-400 focus:border-blue-400 focus:z-10"
                 placeholder="Password"
                 value={formData.password}
                 onChange={handleInputChange}
@@ -117,7 +118,7 @@ const LoginForm = () => {
           <div>
             <button
               type="submit"
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-[#C08261] bg-white hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#C08261]"
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-indigo-500 bg-white hover:bg-white-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-950"
             >
               Login
             </button>

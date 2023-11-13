@@ -37,7 +37,7 @@ export const tasksSlice = createSlice({
   },
 });
 
-export const { addTask, completeTask, deleteTask, setFilter, setTasks,updateTask } = tasksSlice.actions;
+export const { addTask, completeTask, deleteTask, setFilter, setTasks, updateTask } = tasksSlice.actions;
 
 export const selectTasks = (state) => {
   const { tasks, filter } = state.tasks;
@@ -47,8 +47,9 @@ export const selectTasks = (state) => {
   } else if (filter === 'pending') {
     return tasks.filter((task) => !task.completed);
   }
-
   return tasks;
 };
+
+  
 
 export default tasksSlice.reducer;
